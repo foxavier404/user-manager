@@ -1,0 +1,23 @@
+.error-message {
+    display: contents;
+    color: red;
+}
+.ng-container {
+    text-align: end;
+}
+.text-center {
+    text-align: center;
+}
+.image {
+    height: 340px;
+}
+.container {
+    padding: 1%;
+    padding-top: 5em;
+}
+.bg-dark {
+    background-image: url('./../../../assets/bg-dark.jpg');
+    background-size: cover;
+    background-position: center;
+}
+

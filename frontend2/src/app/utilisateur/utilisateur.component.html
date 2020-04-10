@@ -1,0 +1,11 @@
+<li class="list-group-item">
+	<div style="width:20px;height:20px; background-color:red;"
+		*ngIf="utilisateurStatus === 'deconnecté' ">
+	</div>
+	<h4 [ngStyle]="{ color: getColor()}">mon utilisateur : {{ utilisateurName }} -- Statut : {{ getStatus() }}</h4>
+	<input type="text" class="form-control" [(ngModel)]="utilisateurName">
+	<button type="submit">connexion</button>
+	<button type="reset">deconnexion</button>
+	
+</li>
+

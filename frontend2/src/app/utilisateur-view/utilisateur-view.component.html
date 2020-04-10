@@ -1,0 +1,78 @@
+<div class="bg-dark container">
+  <div *ngIf="adminList.length > 0">
+      <hr/>
+      <h1 class="text-center card-text">Liste de administrateurs de l'application</h1>
+      <hr/>
+      <div class="row">
+          <div *ngFor="let personnel of adminList" class="col-lg-4 col-md-12 mb-4">
+
+              <!--Card-->
+              <div class="card z-depth-1-half">
+
+                  <!--Card image-->
+                  <div class="view overlay">
+                      <img [src]="personnel.photoUrl" class="card-img-top image"
+                      alt="">
+                      <div class="mask rgba-white-slight"></div>
+                  </div>
+
+                  <!--Card content-->
+                  <div class="card-body">
+                      <!--Title-->
+                      <h4 class="card-title">{{ personnel.name }}</h4>
+                      <!--Text-->
+                      <p class="card-text">
+                          Some quick example text to build on the card title and make up the bulk of the
+                          card's content.
+                      </p>
+                      <div class="text-center">
+                          <button [disabled]="checkUserState(personnel.id)" [routerLink]="[personnel.id]" class="btn btn-indigo">
+                              Voir le profil 
+                              <i class="fas fa-chevron-right text-white ml-3" aria-hidden="true"></i>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div *ngIf="memberList.length > 0">
+      <hr/>
+      <h1 class="text-center card-text">Listes des employés de l'entreprise</h1>
+      <hr/>
+      <div class="row">
+          <div *ngFor="let personnel of memberList" class="col-lg-4 col-md-12 mb-4">
+
+              <!--Card-->
+              <div class="card z-depth-1-half">
+
+                  <!--Card image-->
+                  <div class="view overlay">
+                      <img [src]="personnel.photoUrl" class="card-img-top image"
+                      alt="">
+                      <div class="mask rgba-white-slight"></div>
+                  </div>
+
+                  <!--Card content-->
+                  <div class="card-body">
+                      <!--Title-->
+                      <h4 class="card-title">{{ personnel.name }}</h4>
+                      <!--Text-->
+                      <p class="card-text">
+                          Some quick example text to build on the card title and make up the bulk of the
+                          card's content.
+                      </p>
+                      <div class="text-center">
+                          <button [disabled]="checkUserState(personnel.id)" [routerLink]="[personnel.id]" class="btn btn-indigo">
+                              Voir le profil 
+                              <i class="fas fa-chevron-right text-white ml-3" aria-hidden="true"></i>
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<ngx-alerts></ngx-alerts>
